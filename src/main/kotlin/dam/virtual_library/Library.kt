@@ -25,9 +25,9 @@ class Library(val name: String) {
             println("Sorry, '$title' is out of stock.");
             return
         }
-
         book.availableCopies--
         println("Successfully borrowed '$title'. Copies remaining: ${book.availableCopies}")
+        if (book.availableCopies == 0) println("Warning: Book is now out of stock!")
     }
 
     fun returnBook(title: String) {
@@ -40,7 +40,7 @@ class Library(val name: String) {
     // dar print de todos os livros na library
     fun showBooks() {
         println("\n--- Library Catalog ---")
-        books.forEach { println("Title: ${it.title}, Author: ${it.author}, Era: ${it.publicationYear}, Available: ${it.availableCopies} copies") }
+        books.forEach { println("$it\n") }
     }
 
     // dar display a todos os livros de um autor especifico

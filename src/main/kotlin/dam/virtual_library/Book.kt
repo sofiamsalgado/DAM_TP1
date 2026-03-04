@@ -22,7 +22,6 @@ abstract class Book(
         set(value) {  // set() é chamado sempre que alguém muda o valor
             if (value < 0) return // não aceita negativos
             field = value // guarda o valor de facto
-            if (value == 0) println("Warning: Book is now out of stock!") // avisa se chegar a 0
         }
 
     // init block, corre automaticamente quando o objeto é criado
