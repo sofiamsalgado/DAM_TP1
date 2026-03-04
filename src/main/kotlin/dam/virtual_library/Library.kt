@@ -32,7 +32,10 @@ class Library(val name: String) {
 
     fun returnBook(title: String) {
         val book = books.find { it.title == title } // procura na lista o primeiro livro cujo titulo é igual ao title recebido, devolve o livro ou null se não encontrar
-        if (book == null) return
+        if (book == null) {
+            println("Book '$title' not found.")
+            return
+        }
         book.availableCopies++
         println("Book '$title' returned successfully. Copies available: ${book.availableCopies}")
     }
