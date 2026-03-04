@@ -29,4 +29,9 @@ abstract class Book(
     init {
         println("Book '$title' by $author has been added to the library.")
     }
+
+    abstract fun getStorageInfo(): String  // metodo abstrato que é definido em cada subclasse
+
+    override fun toString() =  // 6.2 string para representar o objeto
+        "Title: $title, Author: $author, Era: $publicationYear, Available: $availableCopies copies"
 }

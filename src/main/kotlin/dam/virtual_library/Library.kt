@@ -3,8 +3,16 @@ package dam.virtual_library
 class Library(val name: String) {
     private val books = mutableListOf<Book>()
 
+    // sem companion object cada library tem o seu proprio contador, com o companion há um único contador
+    // partilhado por todas as libraries
+    companion object {  //
+        private var totalBooks = 0
+        fun getTotalBooksCreated() = totalBooks
+    }
+
     fun addBook(book: Book) {
         books.add(book)
+        totalBooks++
     }
 
     fun borrowBook(title: String) {
