@@ -4,7 +4,7 @@
 **Unidade Curricular:** Desenvolvimento de Aplicacoes Moveis (DAM)
 **Aluno:** Sofia — dam_a51694
 **Data:** Fevereiro/Marco 2026
-**Repositorio:** _[URL do repositorio GitHub]_
+**Repositorio:** https://github.com/sofiamsalgado/DAM_TP1
 
 ---
 
